@@ -187,7 +187,7 @@
   window.addEventListener('DOMContentLoaded', () => {
     let url = new URL(window.location);
     let last = url.pathname.lastIndexOf('/');
-    let path = (url.pathname.slice(last, -5))
+    let path = (url.pathname.slice(last+1, -5))
     let item = document.querySelector(`#${path}`);
     console.log(item)
     item.querySelector('.active').style.display = 'flex';
