@@ -12,7 +12,76 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <style>
-   
+    .main-contact {
+      padding: 100px 0;
+    }
+    .heading--contact {
+      display: flex;
+    }
+    .input-field {
+      padding: 15px 20px 15px;
+      display: flex;
+      background: transparent;
+      border: white 1px solid;
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      outline: none !important;
+      color: white;
+    }
+    .area {
+      height: 300px;
+    }
+    .main-contact-contain,
+    .main-contain {
+      align-items: center;
+      position: relative;
+    }
+    .main-contain {
+      padding-bottom: 100px;
+    }
+    .sendbutton {
+      background-color: white;
+      outline: none;
+      border: none;
+      height: 40px;
+      width: 200px;
+      color: black;
+      border-radius: 10px;
+      position: relative;
+    }
+    .sendbutton::before{
+      content: '';
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      bottom: -10px;
+      left: -5px;
+      position: absolute;
+      z-index: 0;
+      border: 1px solid white;
+    }
+    .social-list-icon {
+      position: absolute;
+      bottom: 150px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: white;
+    }
+    .social-icon {
+      box-sizing: unset;
+      padding: 5px;
+      border-radius: 50%;
+      border: 1px white solid;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
   </style>
   <body class="main-contact">
       <div class="main-contact-contain container">
@@ -76,7 +145,7 @@
       });
     </script>
     <script>
-     window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener('DOMContentLoaded', () => {
         let url = new URL(window.location);
         let last = url.pathname.lastIndexOf('/');
         let path = (url.pathname.slice(last, -5))
