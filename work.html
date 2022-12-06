@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+  .main-work {
+    padding: 100px 0;
+  }
+  .main-contain-work {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .contain-work {
+    position: relative;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    background: transparent;
+    border: none;
+  }
+
+  .card__image {
+    height: 200px;
+    width: 100%;
+    background-color:transparent;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .image { 
+    height: 100%;
+    width: 100%;
+    background-position: center  !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  p {
+    font-size: 18px;
+    color:  white;
+  }
+</style>
+
+<body class="main-work">
+  <div class="main-work-contain container">
+    <div class="contain-work">
+
+      <div class="decor-top">
+        <span class="line"></span>
+        <span class="icon-star"></span>
+      </div>
+      <div class="decor-bottom">
+        <span class="icon-star"></span>
+        <span class="icon-star big"></span>
+        <span class="icon-star"></span>
+      </div>
+      <div class="decor-bottom-left">
+        <div class="contain">
+          <span class="icon-star star-1"></span>
+          <span class="line"></span>
+          <span class="icon-star big"></span>
+        </div>
+        <span class="icon-star star-2"></span>
+      </div>
+    <div class="row justify-content-center">
+      <div class="row  menu">
+        <a id="home" class="menu-item home" href="./index.html" style="background: url(./icon/Home\ Button@300x.png);">
+        </a>
+        <a id="about" class="menu-item" href="./about.html">
+          <div class="active">
+          </div> About
+        </a>
+        <a id="work" class="menu-item" href="./work.html">
+          <div class="active">
+          </div>Work
+        </a>
+        <a id="contact" class="menu-item" href="./contact.html">
+          <div class="active">
+          </div>Contact
+        </a>
+      </div>
+    </div>
+    <div class="main-contain-work row">
+      <ul>
+        <li>
+          <div data-aos="flip-down" class="card ">
+            <div class="card__image">
+              <div class="image" style="background: url(./icon/3D\ Modelling.png)">
+              </div>
+            </div>
+            <p>3D Modeling</p>
+          </div>
+        </li>
+        <li>
+          <div data-aos="flip-left" class="card">
+            <div class="card__image">
+              <div class="image" style="background: url(./icon/Illustration.png)">
+              </div>
+            </div>
+            <p>Illustration</p>
+          </div>
+        </li>
+        <li>
+          <div data-aos="flip-up" class="card">
+            <div class="card__image">
+              <div class="image" style="background: url(./icon/Digital\ Sketches.png)">
+              </div>
+            </div>
+            <p>Digital Sketches</p>
+          </div>
+        </li>
+        <li>
+          <div data-aos="flip-right" class="card">
+            <div class="card__image">
+              <div class="image" style="background: url(./icon/Sound\ Projects.png)">
+              </div>
+            </div>
+            <p>Sound Projects</p>
+          </div>
+        </li>
+        <li>
+          <div data-aos="flip-up" class="card">
+            <div class="card__image">
+                <div class="image" style="background: url(./icon/Web\ Projects.png), url(./icon/Star\ 2@300x.png);">
+                </div>
+            </div>
+            <p>Web-Project</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+  </div>
+<script>
+  window.addEventListener("load", function () {
+      document.body.classList.add("animate-in");
+    });
+  window.addEventListener("beforeunload", function () {
+      document.body.classList.add("animate-out");
+    });
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    let url = new URL(window.location);
+    let path = (url.pathname.slice(1, -5))
+    let item = document.querySelector(`#${path}`);
+    console.log(item)
+    item.querySelector('.active').style.display = 'flex';
+  }
+  )
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+

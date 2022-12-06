@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <style>
+    .main-contact {
+      padding: 100px 0;
+    }
+    .heading--contact {
+      display: flex;
+    }
+    .input-field {
+      padding: 15px 20px 15px;
+      display: flex;
+      background: transparent;
+      border: white 1px solid;
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      outline: none !important;
+      color: white;
+    }
+    .area {
+      height: 300px;
+    }
+    .main-contact-contain,
+    .main-contain {
+      align-items: center;
+      position: relative;
+    }
+    .main-contain {
+      padding-bottom: 100px;
+    }
+    .sendbutton {
+      background-color: white;
+      outline: none;
+      border: none;
+      height: 40px;
+      width: 200px;
+      color: black;
+      border-radius: 10px;
+      position: relative;
+    }
+    .sendbutton::before{
+      content: '';
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      display: flex;
+      bottom: -10px;
+      left: -5px;
+      position: absolute;
+      z-index: 0;
+      border: 1px solid white;
+    }
+    .social-list-icon {
+      position: absolute;
+      bottom: 150px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: white;
+    }
+    .social-icon {
+      box-sizing: unset;
+      padding: 5px;
+      border-radius: 50%;
+      border: 1px white solid;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  </style>
+  <body class="main-contact">
+      <div class="main-contact-contain container">
+        <div class="row justify-content-center" >
+          <div class="row  menu">
+            <a id="home" class="menu-item home" href="./index.html" style="background: url(./icon/Home\ Button@300x.png);">
+            </a>
+            <a id="about" class="menu-item" href="./about.html">
+              <div class="active">
+              </div> About
+            </a>
+            <a  id ="work" class="menu-item" href="./work.html">
+              <div class="active">
+              </div>Work
+            </a>
+            <a  id = "contact" class="menu-item" href="./contact.html">
+              <div class="active">
+              </div>Contact
+            </a>
+          </div>
+        </div>
+        <div class="main-contain row">
+          <h1 data-aos="zoom-out-up" class="heading col-10 heading--contact">let's work together </h1>
+          <div data-aos="zoom-in" class=" contain-form  col-md-10">
+          <form class="form">
+            <input type="text" name="" id="input1" class="input-field" placeholder="Enter name...">
+            <input type="text" name="" id="input2" class="input-field" placeholder="Enter mail address...">
+            <input type="text" name="" id="input3" class="input-field" placeholder="Enter subject...">
+            <textarea name="" id="input4" placeholder="Enter message..." class=" input-field area"></textarea>
+            <button class="sendbutton"> send now</button>
+          </div>
+          </div>
+          <div class="social-list-icon">
+            <div class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+            <div class="social-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+          </div>
+          <div class="decor-top">
+            <span class="line"></span>
+            <span class="icon-star"></span>
+          </div>
+          <div class="decor-bottom">
+            <span class="icon-star"></span>
+            <span class="icon-star big"></span>
+            <span class="icon-star"></span>
+          </div>
+          <div class="decor-bottom-left">
+            <div class="contain">
+              <span class="icon-star star-1"></span>
+              <span class="line"></span>
+              <span class="icon-star big"></span>
+            </div>
+            <span class="icon-star star-2"></span>
+          </div>
+      </div>
+    <script>
+      window.addEventListener("load", function () {
+          document.body.classList.add("animate-in");
+        });
+      window.addEventListener("beforeunload", function () {
+        document.body.classList.add("animate-out");
+      });
+    </script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        let url = new URL(window.location);
+        let path = (url.pathname.slice(1, -5))
+        let item = document.querySelector(`#${path}`);
+        console.log(item)
+        item.querySelector('.active').style.display = 'flex';
+      }
+      )
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
