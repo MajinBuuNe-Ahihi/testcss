@@ -97,15 +97,15 @@
     });
   </script>
  <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    let url = new URL(window.location);
-    let path = (url.pathname.slice(1, -5))
-    console.log(path)
-    let item = document.querySelector(`#${path}`);
-    console.log(item)
-    item.querySelector('.active').style.display = 'flex';
-  }
-  )
+   window.addEventListener('DOMContentLoaded', () => {
+      let url = new URL(window.location);
+      let last = url.pathname.lastIndexOf('/');
+      let path = (url.pathname.slice(last, -5))
+      let item = document.querySelector(`#${path}`);
+      console.log(item)
+      item.querySelector('.active').style.display = 'flex';
+    }
+    )
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
