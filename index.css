@@ -320,6 +320,15 @@ body {
   width: 10px;
 }
 
+.contain-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 90%;
+  width: 90%;
+  transform: translate(-50%,-50%);
+}
+
 .decor-top {
   position: absolute;
   top: 0;
@@ -327,7 +336,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-20px);
   z-index: 99;
 }
 
