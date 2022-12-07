@@ -34,7 +34,6 @@
     .main-contact-contain,
     .main-contain {
       align-items: center;
-      position: relative;
     }
     .main-contain {
       padding-bottom: 100px;
@@ -81,7 +80,72 @@
       justify-content: center;
       align-items: center;
     }
-  
+    .qrcode {
+      height: 140px;
+      width: 140px;
+      position: absolute;
+      bottom: 130px;
+      right: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: whitesmoke;
+      font-size: 20px;
+    }
+    
+    .qrcode::after{
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid white;
+      border-radius: 10px;
+      clip-path: polygon(0 0, 0 15%,100% 60%, 100% 0);
+    }
+    .qrcode::before{
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid white;
+      border-radius: 10px;
+      clip-path: polygon(0 50%, 0 100%,100% 100%, 100% 90%);
+    }
+    img {
+      height: 70%;
+      width: 70%;
+      position: absolute;
+      z-index: 1;
+    }
+    .star-qr-big,
+    .star-qr-md,
+    .star-qr {
+      position: absolute;
+    }
+
+    .star-qr {
+      height: 15px;
+      width: 15px;
+      right: -20px;
+      bottom: 12%;
+    }
+
+    .star-qr-md {
+      height: 25px;
+      width: 25px;
+      right: -12px;
+      bottom: 15%;
+    }
+    .star-qr-big {
+      height: 45px;
+      width: 45px;
+      left: -20px;
+      top: 15%;
+    }
   </style>
   <body class="main-contact">
       <div class="main-contact-contain container">
@@ -93,11 +157,11 @@
               <div class="active">
               </div> About
             </a>
-            <a  id ="work" class="menu-item" href="./work.html">
+            <a id="work" class="menu-item" href="./work.html">
               <div class="active">
               </div>Work
             </a>
-            <a  id = "contact" class="menu-item" href="./contact.html">
+            <a id="contact" class="menu-item" href="./contact.html">
               <div class="active">
               </div>Contact
             </a>
@@ -137,6 +201,16 @@
             </div>
             <span class="icon-star star-2"></span>
           </div>
+        </div>
+        <div class="qrcode">
+          <span class="icon-star star-qr"></span>
+          <span class="icon-star star-qr-big"></span>
+          <span class="icon-star star-qr-md"></span>
+            <span>
+              QR CODE
+            </span>
+            <img 
+            src="data:image/png;base64,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"  alt="">
         </div>
     <script>
       window.addEventListener("load", function () {
