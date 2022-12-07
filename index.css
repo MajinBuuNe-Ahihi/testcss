@@ -9,11 +9,12 @@
 .main-about,
 .main-contact,
 .main-home {
-
+  min-height: 100vh;
   width: 100vw;
   object-fit: cover;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 50px 0 0 !important;
 }
 main {
   margin-top: 500px;
@@ -26,12 +27,12 @@ main {
 }
 
 .clip {
-  height:300px;
-  width: 300px;
-  border: 5px rgb(255, 255, 255) solid; 
+  height: 320px;
+  width: 320px;
+  border: 1px rgb(255, 255, 255) solid;
   border-radius: 50%;
   margin-right: auto;
-  animation:  identifier linear 6s infinite;
+  animation: identifier linear 6s infinite;
   transform-style: preserve-3d !important;
 }
 
@@ -127,9 +128,7 @@ main {
 }
 
 .heading--main {
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: perspective(250px) translate3d(-62px, 2px, 8px) rotateZ(-16deg) rotateY(23deg) rotateX(-58deg);
+  font-size: 100px;
 }
 
 .heading {
@@ -161,6 +160,7 @@ main {
   color: inherit !important;
   text-decoration: none  !important;
   position: relative;
+  font-size: 30px;
 }
 .main-contain {
   margin-top: 100px;
@@ -257,6 +257,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .menu {
     gap: 30px !important;
   }
@@ -300,13 +301,14 @@ body {
 }
 
 .clip {
-  height: 270px !important;
-  width: 270px !important;
+  height: 280px !important;
+  width: 280px !important;
 }
 .main-home .heading {
-  font-size: 28px !important;
+  font-size: 48px !important;
 }
 }
+
 
 .icon-star  {
   display: flex;
